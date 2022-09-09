@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "FB feed blocker",
+  "version": "1.0",
+
+  "description": "Remove feed from FB",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ff-fb-feed-blocker@petrsiegl.com"
+    }
+  },
+  "icons": {
+    "48": "icons/blocker-48.png"
+  },
+
+  "content_scripts": [
+    {
+       "run_at": "document_start",
+      "matches": ["*://*.facebook.com/*"],
+      "css": ["fb-blocker.css"]
+    }
+  ]
+
+}
